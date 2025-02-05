@@ -136,70 +136,94 @@
             
 
             <!-- Filter Form -->
-            <div class="container position-absolute top-50 start-50 translate-middle z-index-2">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10">
-                        <div class="bg-white rounded-lg shadow-lg p-4">
-                            <h2 class="text-center text-md-start mb-4">Mude sua forma de comprar imóveis</h2>
-                            <div class="row g-3">
-                                <div class="col-md-4">
-                                    <select class="form-select">
-                                        <option value="">Tipo de financiamento</option>
-                                        <option>Minha casa minha vida</option>
-                                        <option>Tradicional</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-4">
-                                    <select class="form-select">
-                                        <option value="">Região</option>
-                                        <option>Zona norte</option>
-                                        <option>Zona sul</option>
-                                        <option>Zona leste</option>
-                                        <option>Zona oeste</option>
-                                        <option>GRANDE ABC</option>
-                                        <option>Guarulhos</option>
-                                        <option>Litoral</option>
-                                    </select>
-                                </div>
-                                
-                                <div class="col-12 text-center">
-                                    <button id="applyFilters" class="btn btn-dark w-100 w-md-auto px-4">
-                                        Apply Filters
-                                    </button>
-                                </div>
+           <!-- Filter Form -->
+           <div class="container position-absolute top-50 start-50 translate-middle z-index-2">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="bg-white rounded-lg shadow-lg p-4 filter-form">
+                        <h2 class="text-center text-md-start mb-4">Mude sua forma de comprar imóveis</h2>
+                        <div class="row g-3">
+                            
+                            <div class="col-md-4">
+                                <select class="form-select">
+                                    <option value="">Tipo de financiamento</option>
+                                    <option>Minha casa minha vida</option>
+                                    <option>Tradicional</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <select class="form-select">
+                                    <option value="">Região</option>
+                                    <option>Zona norte</option>
+                                    <option>Zona sul</option>
+                                    <option>Zona leste</option>
+                                    <option>Zona oeste</option>
+                                    <option>GRANDE ABC</option>
+                                    <option>Guarulhos</option>
+                                    <option>Litoral</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-12 text-center">
+                                <button id="applyFilters" class="btn btn-dark w-100 w-md-auto px-4">
+                                    Apply Filters
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        
+
         </section>
 
 
 
         <style>
             #heroCarousel .carousel-item img {
-                height: 600px; /* Adjust this as per your desired size */
-                object-fit: cover;
-            }
-            @media (max-width: 768px) {
-        #heroCarousel .carousel-control-prev,
-        #heroCarousel .carousel-control-next {
-            display: none;
-        }
-    }
-
-    /* CSS for smaller, rectangular carousel */
-    #heroCarousel .carousel-item img {
-        height: 550px; /* Adjust this as per your desired size */
+        height: 400px; /* Adjust as needed */
         object-fit: cover;
     }
+
+    /* Keep arrows always visible */
+    #heroCarousel .carousel-control-prev,
+    #heroCarousel .carousel-control-next {
+        display: flex;
+    }
+          
+    
+
+    @media (max-width: 576px) {
+    .filter-form {
+        padding: 10px; /* Reduce padding */
+        font-size: 12px; /* Make text smaller */
+    }
+
+    .filter-form select,
+    .filter-form button {
+        font-size: 12px; /* Smaller text in dropdowns and button */
+        padding: 6px; /* Reduce height */
+    }
+
+    .filter-form h2 {
+        font-size: 16px; /* Make heading smaller */
+        text-align: center; /* Center align heading */
+    }
+
+    .filter-form .col-md-4 {
+        width: 100%; /* Make dropdowns full-width */
+    }
+}
+
+
         </style>
 
 
         <style>
             .hero {
                 position: relative;
-                height: 80vh;
+                height: 60vh;
                 overflow: hidden;
             }
 
@@ -218,8 +242,8 @@
                 padding: 20px;
                 border-radius: 10px;
                 color: white;
-                width: 90%;
-                max-width: 500px;
+                width: 60%;
+               
             }
 
             .filter-form input,
